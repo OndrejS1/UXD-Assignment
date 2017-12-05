@@ -23,7 +23,7 @@
 
 [class^="icon-"]:after,
 [class*=" icon-"]:after {
-  font-family: "untitled-font-1";
+  font-family: "fonts/untitled-font-1";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -261,6 +261,10 @@ body.fp-viewing-fifthSection-1 #menu li:nth-child(5) a {
     background: url('images/ireland2.jpg') no-repeat center
      / cover;
 
+}
+
+.centertext {
+  text-align: center;
 }
 
 

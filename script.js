@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
 
 
@@ -27,22 +25,22 @@ $('#fullpage').fullpage({
   anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection','sixthSection'],
   menu: '#menu',
 
-  afterLoad: function(anchorLink, home) {
+  afterLoad: function(anchorLink, index) {
     $header_top.css('background', 'rgba(0, 47, 77, .3)');
     $nav.css('background', 'rgba(0, 47, 77, .25)');
-    if (home == 6) {
+    if (index == 6) {
         $('#fp-nav').hide();
       }
   },
 
-  onLeave: function(home, nexthome, direction) {
-    if(home == 6) {
+  onLeave: function(index, nextIndex, direction) {
+    if(index == 6) {
       $('#fp-nav').show();
     }
   },
 
-  afterSlideLoad: function( anchorLink, home, slideAnchor, slidehome) {
-    if(anchorLink == 'sixthSection' && slidehome == 1) {
+  afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex) {
+    if(anchorLink == 'sixthSection' && slideIndex == 1) {
       $.fn.fullpage.setAllowScrolling(false, 'up');
       $header_top.css('background', 'transparent');
       $nav.css('background', 'transparent');
@@ -59,8 +57,8 @@ $('#fullpage').fullpage({
     }
   },
 
-  onSlideLeave: function( anchorLink, home, slidehome, direction) {
-    if(anchorLink == 'sixthSection' && slidehome == 1) {
+  onSlideLeave: function( anchorLink, index, slideIndex, direction) {
+    if(anchorLink == 'sixthSection' && slideIndex == 1) {
       $.fn.fullpage.setAllowScrolling(true, 'up');
       $header_top.css('background', 'rgba(0, 47, 77, .3)');
       $nav.css('background', 'rgba(0, 47, 77, .25)');
